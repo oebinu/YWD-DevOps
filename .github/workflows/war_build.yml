@@ -58,7 +58,7 @@ jobs:
         context: ./
         file: ./Dockerfile/Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/YWD-DevOps:v1
+        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ywd-devops:v1
 
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
