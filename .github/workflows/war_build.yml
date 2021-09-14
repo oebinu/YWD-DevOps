@@ -42,4 +42,5 @@ jobs:
         name: war-package
 
     - name: Display structure of downloaded files
-      run: ls -R
+      run: ls -R | pwd
+  
