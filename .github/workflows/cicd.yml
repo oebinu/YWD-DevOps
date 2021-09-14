@@ -98,5 +98,5 @@ jobs:
         oci ce cluster create-kubeconfig --cluster-id ${{ secrets.OKE_OCID }} --file ~/.kube/config --region ${{secrets.OCI_REGION}} --token-version 2.0.0 
         export KUBECONFIG=~/.kube/config
         kubectl get node
-        kubectl rollout restart deploy was
+        kubectl rollout restart deploy was -n cicd
         
