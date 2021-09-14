@@ -41,9 +41,6 @@ jobs:
       with:
         name: war-package
 
-    - name: Display structure of downloaded files
-      run: ls -R | pwd
-
     - env:
         v1: $VERSION 
 
