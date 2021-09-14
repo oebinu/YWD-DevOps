@@ -32,3 +32,14 @@ jobs:
       with:
         name: war-package
         path: ./build/libs/*.war
+
+
+
+    - uses: actions/checkout@v2
+
+    - uses: actions/download-artifact@v2
+      with:
+        name: war-package
+
+    - name: Display structure of downloaded files
+      run: ls -R
