@@ -30,7 +30,7 @@ jobs:
       
   job-02:
     name: my-second-job
-    runs-on: ubuntu-latest
+    
     steps:
     
     - name: Upload war file to artifact
