@@ -29,8 +29,9 @@ jobs:
       
       
   job-02:
+    needs: job-01
     name: my-second-job
-    
+    runs-on: ubuntu-latest
     steps:
     
     - name: Upload war file to artifact
