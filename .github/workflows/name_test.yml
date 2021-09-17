@@ -48,7 +48,7 @@ jobs:
 
 
   job-03:
-    needs: job-02
+    needs: [job-01, job-02]
     name: docker-job
     runs-on: ubuntu-latest
     
