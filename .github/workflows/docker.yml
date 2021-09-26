@@ -19,4 +19,4 @@ jobs:
       with:
         registry: ap-seoul-1.ocir.io
         username: ${{ secrets.OCI_USERNAME }}
-        password: ${{ secrets.OCI_TOKEN }}
+        password: ${{ secrets.OCI_TOKEN }} 
