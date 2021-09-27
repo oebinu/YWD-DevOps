@@ -13,8 +13,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: GCP Github Action
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      - name: Set Node.js 10.x
+        uses: actions/setup-node@master
         with:
-            service_account_key: ${{ secrets.GCP_SA_KEY }}
-            project_id: ${{ secrets.GCP_PROJECT_ID }}
+          node-version: 10.x
+
+      - name: npm install
+        working-directory: ./setupGcloudSDK
+        run: npm install
+
+      - name: Lint
+        working-directory: ./setupGcloudSDK
+        run: npm run lint
+
+      - name: Unit tests
+        working-directory: ./setupGcloudSDK
+        run: npm test
+
+        - name: GCP Github Action
+          uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+          with:
+              service_account_key: ${{ secrets.GCP_SA_KEY }}
+              project_id: ${{ secrets.GCP_PROJECT_ID }}
